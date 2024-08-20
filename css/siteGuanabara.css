@@ -1,0 +1,325 @@
+@charset "UTF3";
+
+/* Importado do go0gle fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Passion+One:wght@400;700;900&family=Playwrite+AR:wght@100..400&family=Playwrite+DK+Loopet:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* importado deste sit	https://www.dafont.com/pt/ */
+
+@font-face{
+    font-family: 'android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal; 
+    font-style: normal;
+
+}
+
+/* cores selecionadas previamente 
+    #c5ebd6
+    #83e1ad
+    #3ddc84
+    #2fa866
+    #1a5c37
+    #063d1e
+*/
+/* pseudo classe :root */
+:root{
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#1a5c37;
+    --cor4:#063d1e;
+    --cor5:#063d1e;
+    /* fontes */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal ;
+    --fonte-destaque:"Bebas Neue", sans-serif;
+        font-weight: 400;
+    --fonte-android:'android';
+    
+}
+
+/*   *seletor global, vale para todos */
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+/* font-family: cursive; */
+/* background-color: #c5ebd6; */
+/* background-color:#e7f7df; */
+
+background-color: var(--cor0);
+font-family:var(--fonte-padrao);
+}
+
+a.externo::after{
+    /* \00a0 para dar espaçamenta da seta */
+    content: '\00a0➯';
+}
+
+
+
+
+/* Estilização HEADER */
+ header{
+    /* background-color: var(--cor4); */
+
+    /* background-image: linear-gradient(90deg, var(--cor2), var(--cor5),var(--cor2)); */
+
+    background-image: linear-gradient(to bottom,var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 3px;
+ } 
+
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size:3rem ;
+    letter-spacing: 5px;
+    /* border: 1px solid blue */
+    margin-bottom: 20px;
+    /* repete no parágrafo tamboem */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+
+}
+
+
+header> p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font: size 1.2em;
+    line-height: 2rem;
+    margin-bottom: 20px;
+
+    
+    /* quando coloquei um max-width tive que colocar margin auto para centralizar pois ficou em bloco */
+    max-width: 500px;
+    margin: auto; 
+
+
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+} 
+
+
+/* Estilização NAV,NAVEGAÇÃO */
+
+nav{
+    /* border: 1px solid red;
+    height: 50px;
+    margin-top: 5px; */
+
+    background-color: var(--cor5);
+    padding: 10px;
+    padding-bottom: 20px;
+    /* box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.31) */
+    box-shadow: 1px 7px 9px 1px rgba(0,0,0,0.31);
+
+}
+
+
+nav> a{
+    color:var(--cor1);
+    font-weight: bold;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    
+    /* transição */
+    transition-duration: 0.5s;
+}
+
+        /* sequencia correta de colocar o hover */
+nav> a:hover {
+    background-color: var(--cor2);
+    color: var(--cor5);
+    /* border-radius: 5px; */
+
+}
+
+
+/* Estilização MAIN, PRINCIPAL */
+main{
+    background-color: white;
+    /* responsividade no conteúdo principal */
+    min-width: 300px;
+    max-width: 800px;
+    /* deixa centralizado margin auto para telas muito grande */
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* medidas padrão, a cor sempre black, e faz os ajustes */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    /* barda aredondas somente em baixo */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+main> article h1 {
+    /* border: 5px solid green; */
+    /* height: 30px; */
+    /* margin-top: 5px; */
+    font-family: var(--fonte-android);
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding-top: 10px;
+}
+/* Estilização do MAIN > ARTICLE */
+main> article h2{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    color: var(--cor4);
+    font-size: 1.3rem;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    border-radius: 3px;
+    padding: 4px;
+
+} 
+
+
+        /* Tem que levar em consideração a hierarquia das tags */
+main> article p{
+    margin: 15px 0px;
+    text-indent: 30px;
+    text-align: justify;
+    /* altura da letras, espaçamento em altura */
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+/* Estilização do MAIN > ARTICLE IMG */
+main> article img{
+    /* resposividada das imagens */
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+
+
+
+        /* Estilizando a classe pequena */
+main> article img.pequena{
+            /* width: 50%; melhor usar max-width */
+         max-width: 350px;
+            /* para centralizar a imagem, tive que colocar um display block e margin auto, isso porque a tag img é inline */
+        display: block;
+         margin: auto;
+        
+}
+
+main >article strong{
+    color:var(--cor4);
+    font-weight: bold;
+    
+}
+
+
+
+main> article a{
+    color: var(--cor5);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 2px 6px;
+    border-radius: 2px;
+    
+}
+main> article a:hover{
+    text-decoration: underline;
+    color:var(--cor3);
+    border-radius: 5px;
+
+}
+
+
+
+
+/* Estilização do MAIN VÍDEO */
+div.video{
+    background-color: var(--cor5);
+    /* margin-bottom: 30px; */
+
+    /* margin  top right bottom left */
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    /* configuração por causa dos vídeo. isso é uma gambiarra, mas legal */
+    position: relative;
+    /* aumenta para diminuir a parte preta na tela  59% sume*/
+    padding-bottom: 50%;
+    border-radius: 3px;
+}
+div.video> iframe{
+    position: absolute;
+        top: 5%;
+        left: 5%;
+        /* configuração ideal em porcentagem */
+        width: 90%;
+        height: 90%;
+
+}
+
+
+
+/* Estilização do ASIDE */
+aside{
+    background-color: var(--cor1);
+    padding:10px;
+    border-radius: 10px;
+    box-shadow:2px 4px 6px 1px rgba(0,0,0,0.22);
+    
+}
+ aside> ul {
+    /* inside bolinha fica para dentro */
+    list-style-position: inside; 
+    columns: 2;
+    /* emoji copia e cola, para dar uma afastamento \00a0  da espaçamento*/
+    list-style-type: '✔\00a0';
+    
+
+ }
+ 
+
+ aside> h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    /* para o backgroud-color subir  e fica aredondado */
+    margin:-10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+ }
+aside>p a:hover{
+    background-color: var(--cor0);
+
+}
+
+/* Estilização footer, RODAPÉ */
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+
+footer> p> a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer> p> a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
