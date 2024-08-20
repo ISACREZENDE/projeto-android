@@ -95,7 +95,7 @@ header> p{
     font-family: var(--fonte-padrao);
     font: size 1.2em;
     line-height: 2rem;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 
     
     /* quando coloquei um max-width tive que colocar margin auto para centralizar pois ficou em bloco */
@@ -155,7 +155,7 @@ main{
     /* deixa centralizado margin auto para telas muito grande */
     margin: auto;
     padding: 20px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     /* medidas padrão, a cor sempre black, e faz os ajustes */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
     /* barda aredondas somente em baixo */
